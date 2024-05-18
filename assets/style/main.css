@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+/* ページ全体のスタイル
+------------------------------------------ */
+
+body {
+    color: #333333;
+    font-weight: 700;
+    line-height: 1.75;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {}
+
+img {}
+
+li {
+    list-style: none;
+}
+
+/* 共通
+------------------------------------------ */
+/* ボタン */
+.button {
+    position: relative;
+    display: block;
+    text-align: center;
+    border-radius: 30px;
+    width: 280px;
+    height: 60px;
+}
+
+.button--white {
+    color: #005BAC;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Header
+------------------------------------------ */
+
+.header {
+    display: flex;
+    /* position: fixed; */
+    /* top: 8px; */
+    /* margin-left: 8px; */
+    /* margin-right: 9px; */
+    height: 70px;
+    /* width: calc(100% - 17px); */
+    /* background-color: #0079f2; */
+    justify-content: space-between;
+    z-index: 10;
+}
+
+/* ロゴ */
+.header__logo {
+    height: 100%;
+    margin-left: 16px;
+    /* padding-top: 16px; */
+    /* padding-bottom: 16px; */
+}
+
+.header__link {
+    /* display: inline-block; */
+    /* height: 70px; */
+    color: #005BAC;
+    font-family: Poppins;
+    font-size: 22px;
+    /* vertical-align: baseline; */
+    /* line-height: 70px; */
+}
+
+.header__menuBtn {
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #005BAC;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+}
+
+.header__menuIcon {
+    /* position: absolute; */
+    /* right: 21.875px; */
+    /* top: 20px; */
+    width: 30px;
+    height: 26.25px;
+}
+
+@media (min-width: 768px) {
+    .header__menuBtn {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__hamburgerMenu {
+        position: fixed;
+        /* margin-top: 6px; */
+        top: 70px;
+        /* padding-top: 42px; */
+        /* padding-bottom: 130px; */
+        width: 100%;
+        /* width: calc(100vw - 17px); */
+        /* height: 524px; */
+        background-color: #005BAC;
+        /* border-radius: 32px; */
+        transition: opacity 0.3s linear;
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/* アクティブ状態 */
+.header__hamburgerMenu--active {
+    opacity: 1;
+    visibility: visible;
+}
+
+@media (max-width: 767px) {
+    .header__hamburgerMenuList {
+        display: table;
+        width: 100vw;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__hamburgerMenuItem {
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        margin: 0 1.72rem;
+        padding: 1rem 0;
+        line-height: 1.75;
+        font-size: 18px;
+        font-weight: 500;
+        color: #fff;
+        border-bottom: 0.0625rem solid #80ADD5;
+    }
+}
+
+/* 右矢印アイコン */
+@media (max-width: 767px) {
+    .header__hamburgerMenuItem::before {
+        content: url(../image/arrow_white_sp.png);
+        margin-right: 20px;
+    }
+}
+
+/* 右矢印アイコン */
+@media (max-width: 767px) {
+    .header__hamburgerMenuBtn {
+        margin-top: 32px;
+        margin-bottom: 38px;
+    }
+}
