@@ -24,31 +24,103 @@
 
     <body>
         <header class="header">
-            <h1 class="header__logo">
-                <a href="#" class="header__link">
-                    <span class="header__title">Kira-Kira Juku</span>
-                </a>
-            </h1>
+            <div class="header__inner">
+                <h1 class="header__logo">
+                    <a href="#" class="header__link">
+                        <span class="header__title">Kira-Kira Juku</span>
+                    </a>
+                </h1>
 
-            <div class="header__menuBtn">
-                <img src="assets/image/header_hamburger_menu.png" alt="" class="header__menuIcon">
-            </div>
-            <!-- ナビゲーション、ヘッダーメニュー -->
-            <nav class="header__hamburgerMenu header__nav">
-                <ul class="header__hamburgerMenuList header__navList">
-                    <li><a href="#top" class="header__hamburgerMenuItem header__navItem">選ばれる3つの理由</a></li>
-                    <li><a href="#course" class="header__hamburgerMenuItem header__navItem">コース・目的</a></li>
-                    <li><a href="#price" class="header__hamburgerMenuItem header__navItem">費用</a></li>
-                </ul>
-                <!-- ボタン -->
-                <div class="header__hamburgerMenuBtn">
-                    <a href="#" class="button button--white">入学説明会に申し込む</a>
+                <div class="header__menuBtn">
+                    <img src="assets/image/header_hamburger_menu.png" alt="" class="header__menuIcon">
                 </div>
-            </nav>
+                <!-- ナビゲーション、ヘッダーメニュー -->
+                <nav class="header__hamburgerMenu header__nav">
+                    <ul class="header__hamburgerMenuList header__navList">
+                        <li><a href="#top" class="header__hamburgerMenuItem header__navItem">選ばれる3つの理由</a></li>
+                        <li><a href="#course" class="header__hamburgerMenuItem header__navItem">コース・目的</a></li>
+                        <li><a href="#price" class="header__hamburgerMenuItem header__navItem">費用</a></li>
+                    </ul>
+                    <!-- ボタン -->
+                    <div class="header__applicationBtn">
+                        <a href="#" class="button button--header">入学説明会に申し込む</a>
+                    </div>
+                </nav>
+            </div>
         </header>
         <main>
             <div class="cover">
-                main
+                <div class="cover__top">
+                    <div class="cover__msg">
+                        <div class="cover__badge">
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./assets/image/cover_frame_left_pc.png">
+                                <img src="./assets/image/cover_frame_left_sp.png" class="cover__badgeLeaf" alt="">
+                            </picture>
+                            <div class="cover__badgeTxtBox">
+                                <p class="cover__badgeTitle">難関大学の合格実績</p>
+                                <span class="cover__badgeRankPrefix">No.</span>
+                                <span class="cover__badgeRank">1</span>
+                            </div>
+                            <picture>
+                                <source media="(min-width: 768px)" srcset="./assets/image/cover_frame_right_pc.png">
+                                <img src="./assets/image/cover_frame_right_sp.png" class="cover__badgeLeaf" alt="">
+                            </picture>
+                        </div>
+                        <div class="cover__txtBox">
+                            <div class="cover__txtSmall">現役高校生・高卒生</div>
+                            <div class="cover__txtLarge">入学説明会の<br>お申込み開始</div>
+                        </div>
+                    </div>
+                </div>
+                <picture>
+                    <source media="(min-width: 768px)" srcset="./assets/image/cover_bg_pc.png">
+                    <img src="./assets/image/cover_bg_sp.png" class="cover__image" alt="">
+                </picture>
+                <div class="cover__bottom">
+                    <div class="cover__btn">
+                        <a href="#" class="button button--cover button--green">入学のお問い合わせ</a>
+                        <a href="#" class="button button--cover button--orange">入学のお問い合わせ</a>
+                        <a href="#" class="button button--cover button--blue">入学のお問い合わせ</a>
+                    </div>
+                </div>
+            </div>
+            <section class="point">
+                <div class="point__sectionTitle">
+                    <span class="point__sectionTitleBase">選ばれる</span>
+                    <span class="point__sectionTitleHighlight">3</span>
+                    <span class="point__sectionTitleBase">つの理由</span>
+                </div>
+                <div class="point__item">
+                    <picture class="point__imageBox">
+                        <source media="(min-width: 768px)" srcset="./assets/image/point_pc_01.png">
+                        <img src="./assets/image/point_sp_01.png" class="point__image" alt="">
+                    </picture>
+                    <div class="point__description">
+                        <div class="point__logo">
+                            <span class="point__logoHeading">Point</span>
+                            <span class="point__logoSpace"> </span>
+                            <span class="point__logoNumber">1</span>
+                        </div>
+                        <div class="point__itemTitle">実績のある講師陣だから安心</div>
+                        <div class="point__itemText">テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</div>
+                    </div>
+                </div>
+            </section>
+            <div class="application">
+                application button
+            </div>
+            <section class="course">
+                section course
+            </section>
+            <div class="application">
+                application button
+            </div>
+            <section class="price">
+                section price
+            </section>
+            <div class="application">
+                application button
             </div>
         </main>
         <footer>

@@ -4,7 +4,7 @@
 ------------------------------------------ */
 
 body {
-    color: #333333;
+    color: #333;
     font-weight: 700;
     line-height: 1.75;
     font-family: 'Noto Sans JP', sans-serif;
@@ -30,19 +30,6 @@ li {
     display: block;
     text-align: center;
     border-radius: 30px;
-    width: 280px;
-    height: 60px;
-}
-
-.button--white {
-    color: #005BAC;
-    padding-top: 10px;
-    padding-left: 0px;
-    margin-left: auto;
-    margin-right: auto;
-    background-color: #fff;
-    font-size: 20px;
-    font-weight: 700;
 }
 
 /* Header
@@ -50,10 +37,8 @@ li {
 
 .header {
     display: flex;
-    /* position: fixed; */
-    /* top: 8px; */
-    /* margin-left: 8px; */
-    /* margin-right: 9px; */
+    position: sticky;
+    top: 0;
     height: 70px;
     /* width: calc(100% - 17px); */
     /* background-color: #0079f2; */
@@ -61,12 +46,48 @@ li {
     z-index: 10;
 }
 
+@media (min-width: 768px) {
+    .header {
+        height: 100px;
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+.header__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+}
+
+@media (min-width: 768px) {
+    .header__inner {
+        display: flex;
+        /* position: relative; */
+        height: 100px;
+        width: 100vw;
+        max-width: 1200px;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+}
+
 /* ロゴ */
 .header__logo {
-    height: 100%;
+    display: flex;
+    width: 166px;
     margin-left: 16px;
-    /* padding-top: 16px; */
-    /* padding-bottom: 16px; */
+    /* flex-wrap: nowrap; */
+}
+
+@media (min-width: 768px) {
+    .header__logo {
+        font-size: 32px;
+        margin-left: unset;
+        width: 242px;
+    }
 }
 
 .header__link {
@@ -79,6 +100,13 @@ li {
     /* line-height: 70px; */
 }
 
+@media (min-width: 768px) {
+    .header__link {
+        font-size: 32px;
+    }
+}
+
+/* ハンバーガーメニュー */
 .header__menuBtn {
     position: fixed;
     right: 0;
@@ -121,16 +149,38 @@ li {
     }
 }
 
-/* アクティブ状態 */
-.header__hamburgerMenu--active {
-    opacity: 1;
-    visibility: visible;
+@media (min-width: 768px) {
+    .header__nav {
+        display: flex;
+        width: calc(100% - 242px);
+        justify-content: right;
+    }
+}
+
+@media (max-width: 767px) {
+    .header__hamburgerMenu--active {
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 @media (max-width: 767px) {
     .header__hamburgerMenuList {
         display: table;
         width: 100vw;
+    }
+}
+
+@media (min-width: 768px) {
+    .header__navList {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 280px);
+        justify-content: space-evenly;
+        padding-left: 30px;
+        /* width: calc(100% - 300px); */
+        /* justify-content: space-around; */
+        /* column-gap: 37px; */
     }
 }
 
@@ -141,7 +191,7 @@ li {
         justify-content: left;
         margin: 0 1.72rem;
         padding: 1rem 0;
-        line-height: 1.75;
+        /* line-height: 1.75; */
         font-size: 18px;
         font-weight: 500;
         color: #fff;
@@ -149,7 +199,6 @@ li {
     }
 }
 
-/* 右矢印アイコン */
 @media (max-width: 767px) {
     .header__hamburgerMenuItem::before {
         content: url(../image/arrow_white_sp.png);
@@ -157,10 +206,323 @@ li {
     }
 }
 
-/* 右矢印アイコン */
+@media (min-width: 768px) {
+    .header__navItem {
+        color: #333;
+        font-size: 20px;
+        font-weight: 500;
+    }
+}
+
 @media (max-width: 767px) {
-    .header__hamburgerMenuBtn {
+    .header__applicationBtn {
         margin-top: 32px;
         margin-bottom: 38px;
     }
 }
+
+@media (min-width: 768px) {
+    .header__applicationBtn {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.button--header {
+    color: #005BAC;
+    background-color: #fff;
+    font-size: 20px;
+    width: 280px;
+    height: 60px;
+    padding-top: 10px;
+    padding-left: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 768px) {
+    .button--header {
+        padding-top: 10px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        background-color: #005BAC;
+        font-size: 20px;
+    }
+}
+
+/* Cover
+------------------------------------------ */
+
+.cover {
+    /* position: relative; */
+}
+
+@media (min-width: 768px) {
+    .cover {}
+}
+
+.cover__top {
+    position: relative;
+    /* height: 651px; */
+}
+
+@media (min-width: 768px) {
+    .cover__top {
+        max-width: 1200px;
+        margin: auto;
+    }
+}
+
+.cover__image {
+    width: 100%;
+    /* max-width: 100%; */
+    height: auto;
+    object-fit: cover;
+}
+
+@media (min-width: 768px) {
+    .cover__image {
+        height: 651px;
+        width: 100vw;
+    }
+}
+
+.cover__msg {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.cover__badge {
+    display: flex;
+}
+
+.cover__badgeLeaf {}
+
+.cover__badgeTitle {
+    font-size: 11px;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .cover__badgeTitle {
+        font-size: 20px;
+    }
+}
+
+.cover__badgeRankPrefix {
+    color: #F11F8D;
+    font-size: 25px;
+    font-family: Poppins;
+    font-weight: 800;
+    font-style: Italic;
+}
+
+@media (min-width: 768px) {
+    .cover__badgeRankPrefix {
+        color: #F11F8D;
+        font-size: 54px;
+    }
+}
+
+.cover__badgeRank {
+    color: #F11F8D;
+    font-size: 36px;
+    font-family: Poppins;
+    font-weight: 800;
+    font-style: Italic;
+}
+
+@media (min-width: 768px) {
+    .cover__badgeRank {
+        font-size: 74px;
+    }
+}
+
+.cover__txtBox {}
+
+.cover__txtSmall {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+@media (min-width: 768px) {
+    .cover__txtSmall {
+        font-size: 33px;
+    }
+}
+
+.cover__txtLarge {
+    color: #005BAC;
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 1.3;
+}
+
+@media (min-width: 768px) {
+    .cover__txtLarge {
+        font-size: 60px;
+    }
+}
+
+/* ボタンをグルーピングしたflexボックスを中央寄せ */
+.cover__bottom {
+    display: flex;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+@media (min-width: 768px) {
+    .cover__bottom {
+        margin-top: -30px;
+        max-width: 1200px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+/* ボタンの間隔はrow/column-gapで指定 */
+.cover__btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 12px;
+}
+
+@media (min-width: 768px) {
+    .cover__btn {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        /* column-gap: 12px; */
+        width: 100%;
+    }
+}
+
+.button--cover {
+    padding-top: 10px;
+    padding-left: 0px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #005BAC;
+    width: 340px;
+    height: 75px;
+}
+
+@media (min-width: 768px) {
+    .button--cover {
+        padding-top: 10px;
+        padding-left: 0px;
+        margin-left: auto;
+        margin-right: auto;
+        color: #fff;
+        background-color: #005BAC;
+        font-size: 20px;
+    }
+}
+
+.button--green {
+    background-color: #77CB33;
+}
+
+.button--orange {
+    background-color: #F6AA00;
+}
+
+.button--blue {
+    background-color: #3AC8AD;
+}
+
+
+/* Point
+------------------------------------------ */
+.point {
+    /* margin-left: 16px; */
+    /* margin-right: 16px; */
+    width: 343px;
+    margin: auto;
+}
+
+@media (min-width: 768px) {
+    .point {
+        max-width: 1200px;
+        width: unset;
+        margin: auto;
+    }
+}
+
+.point__sectionTitle {
+    text-align: center;
+}
+
+.point__sectionTitleBase {
+    font-size: 28px;
+}
+
+.point__sectionTitleHighlight {
+    color: #F11F8D;
+    font-size: 40px;
+    font-family: Poppins;
+}
+
+.point__item {
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 768px) {
+    .point__item {
+        flex-direction: row;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .point__imageBox {
+        width: 48%;
+    }
+}
+
+.point__description {}
+
+.point__logo {}
+
+.point__logoHeading {
+    color: #F11F8D;
+    font-size: 24px;
+    font-style: italic;
+    font-family: Poppins;
+}
+
+.point__logoSpace {
+    color: #F11F8D;
+    font-size: 32px;
+    font-style: italic;
+    font-family: Poppins;
+}
+
+.point__logoNumber {
+    color: #F11F8D;
+    font-size: 36px;
+    font-style: italic;
+    font-family: Poppins;
+}
+
+.point__itemTitle {
+    font-size: 20px;
+}
+
+.point__itemText {
+    font-size: 16px;
+}
+
+/* Course
+------------------------------------------ */
+
+/* Price
+------------------------------------------ */
+
+/* Footer
+------------------------------------------ */
