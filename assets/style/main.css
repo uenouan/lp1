@@ -12,9 +12,8 @@ body {
 
 a {
     text-decoration: none;
+    color: inherit;
 }
-
-a:hover {}
 
 img {
     vertical-align: bottom;
@@ -48,6 +47,17 @@ li {
 }
 
 @media (min-width: 768px) {
+    .button--header {
+        color: #fff;
+        background-color: #005BAC;
+        font-size: 18px;
+        border-radius: 31px;
+        width: 220px;
+        height: 50px;
+    }
+}
+
+@media (min-width: 960px) {
     .button--header {
         color: #fff;
         background-color: #005BAC;
@@ -200,7 +210,13 @@ li {
 
 @media (min-width: 768px) {
     .header__logo {
-        font-size: 32px;
+        margin-left: unset;
+        width: 212px;
+    }
+}
+
+@media (min-width: 960px) {
+    .header__logo {
         margin-left: unset;
         width: 242px;
     }
@@ -213,6 +229,12 @@ li {
 }
 
 @media (min-width: 768px) {
+    .header__link {
+        font-size: 28px;
+    }
+}
+
+@media (min-width: 960px) {
     .header__link {
         font-size: 32px;
     }
@@ -255,6 +277,14 @@ li {
 @media (min-width: 768px) {
     .header__nav {
         display: flex;
+        width: calc(100% - 212px);
+        justify-content: right;
+    }
+}
+
+@media (min-width: 960px) {
+    .header__nav {
+        display: flex;
         width: calc(100% - 242px);
         justify-content: right;
     }
@@ -275,6 +305,16 @@ li {
 }
 
 @media (min-width: 768px) {
+    .header__navList {
+        display: flex;
+        align-items: center;
+        width: calc(100% - 220px);
+        justify-content: space-evenly;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 960px) {
     .header__navList {
         display: flex;
         align-items: center;
@@ -307,7 +347,13 @@ li {
 
 @media (min-width: 768px) {
     .header__navItem {
-        color: #333;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}
+
+@media (min-width: 960px) {
+    .header__navItem {
         font-size: 20px;
         font-weight: 500;
     }
@@ -362,6 +408,13 @@ li {
 @media (min-width: 768px) {
     .cover__image {
         height: 651px;
+    }
+}
+
+@media (min-width: 1921px) {
+    .cover__image {
+        width: 100vw;
+        height: auto;
     }
 }
 
@@ -748,13 +801,13 @@ li {
 
 .course__tabContent {
     display: none;
-    padding: 3px 16px 53px;
+    padding: 28px 16px 53px;
     background-color: #F2F9FF;
 }
 
 @media (min-width: 768px) {
     .course__tabContent {
-        padding: 0 32px 24px;
+        padding: 32px 32px 24px;
         border-radius: 0 0 12px 12px;
     }
 }
@@ -777,16 +830,20 @@ li {
     }
 }
 
+@media (min-width: 768px) {
+    .course__tabContentImageBox {
+        display: block;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+}
+
 .course__tabContentImage {
     width: 100%;
-    padding-top: 25px;
-    padding-bottom: 9px;
 }
 
 @media (min-width: 768px) {
     .course__tabContentImage {
-        padding-top: 32px;
-        overflow: hidden;
         transition: transform .6s ease;
     }
 }
@@ -799,6 +856,7 @@ li {
 
 .course__tabContentItemTitle {
     font-size: 20px;
+    margin-top: 9px;
 }
 
 @media (min-width: 768px) {
@@ -933,7 +991,7 @@ li {
     }
 }
 
-.footer__faq {
+.footer__linkItem {
     position: relative;
     height: 170px;
     display: flex;
@@ -941,31 +999,20 @@ li {
 }
 
 @media (min-width: 768px) {
-    .footer__faq {
+    .footer__linkItem {
         height: unset;
-        max-width: calc(100% /2);
+        width: 50%;
     }
-}
-
-.footer__faqTxtBox {
-    position: absolute;
-    top: 0;
-    height: 170px;
-    width: 374px;
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
 }
 
 @media (min-width: 768px) {
-    .footer__faqTxtBox {
-        height: 100%;
+    .footer__linkItemRef {
+        display: block;
         width: 100%;
-        justify-content: center;
     }
 }
 
-.footer__faqTxt {
+.footer__linkItemTxt {
     position: absolute;
     font-size: 22px;
     color: #fff;
@@ -975,7 +1022,7 @@ li {
 }
 
 @media (min-width: 768px) {
-    .footer__faqTxt {
+    .footer__linkItemTxt {
         font-size: 32px;
         top: 50%;
         left: 50%;
@@ -984,14 +1031,20 @@ li {
 }
 
 @media (min-width: 768px) {
-    .footer__faqImageBox {
-        height: auto;
-        max-width: 100%;
+    .footer__linkItemLink {
+        display: block;
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .footer__linkItemImageWrap {
+        display: block;
         overflow: hidden;
     }
 }
 
-.footer__faqImage {
+.footer__linkItemImage {
     height: 170px;
     max-width: 374px;
     object-fit: cover;
@@ -999,105 +1052,21 @@ li {
 }
 
 @media (min-width: 768px) {
-    .footer__faqImage {
+    .footer__linkItemImage {
         height: auto;
-        max-width: 100%;
-        transition: transform .6s ease;
-    }
-}
-
-@media (min-width: 768px) {
-    .footer__faqImage:hover {
-        transform: scale(1.2);
-    }
-}
-
-.footer__faqImageShadow {
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 170px;
-    background: rgba(0, 0, 0, 30%);
-}
-
-@media (min-width: 768px) {
-    .footer__faqImageShadow {
-        display: none;
-    }
-}
-
-.footer__classroom {
-    position: relative;
-    height: 170px;
-    display: flex;
-    justify-content: center;
-}
-
-@media (min-width: 768px) {
-    .footer__classroom {
-        height: unset;
-        max-width: calc(100% /2);
-    }
-}
-
-.footer__classroomTxtBox {
-    position: absolute;
-    top: 0;
-    height: 170px;
-    width: 374px;
-    padding-left: 16px;
-    display: flex;
-    align-items: center;
-}
-
-@media (min-width: 768px) {
-    .footer__classroomTxtBox {
-        height: 100%;
         width: 100%;
-        justify-content: center;
-    }
-}
-
-.footer__classroomTxt {
-    position: absolute;
-    font-size: 22px;
-    color: #fff;
-    top: 50%;
-    left: 5%;
-    transform: translate(0, -50%);
-}
-
-@media (min-width: 768px) {
-    .footer__classroomTxt {
-        font-size: 32px;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-}
-
-.footer__classroomImage {
-    max-width: 374px;
-    height: 170px;
-    object-fit: cover;
-    object-position: 0 100%;
-}
-
-@media (min-width: 768px) {
-    .footer__classroomImage {
-        height: auto;
         max-width: 100%;
         transition: transform .6s ease;
     }
 }
 
 @media (min-width: 768px) {
-    .footer__classroomImage:hover {
+    .footer__linkItemImage:hover {
         transform: scale(1.2);
     }
 }
 
-.footer__classroomImageShadow {
+.footer__linkItemShadow {
     position: absolute;
     top: 0;
     width: 100%;
@@ -1106,7 +1075,7 @@ li {
 }
 
 @media (min-width: 768px) {
-    .footer__classroomImageShadow {
+    .footer__linkItemShadow {
         display: none;
     }
 }
