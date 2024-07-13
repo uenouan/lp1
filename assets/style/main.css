@@ -151,6 +151,14 @@ li {
     }
 }
 
+@media (min-width: 768px) {
+    .application__btnWrap {
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+    }
+}
+
 .application__btn {
     margin-top: 12px;
 }
